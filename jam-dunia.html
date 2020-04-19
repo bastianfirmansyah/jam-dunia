@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jam Dunia </title>
+</head>
+<body >
+    <h1> <center>Jam Dunia</center></h1>
+
+    <h3> <center>
+      <p id = "london" ><body onload ="new waktu().london()"> GMT+0 London, Inggris</p>
+       <p id = "paris" > <body onload ="new waktu().paris()"> GMT + 1 Paris, Perancis</p>
+        <p id = "istanbul" ></p> <body onload ="new waktu().istanbul()"> GMT + 2 Istanbul, Turki</p>
+        <p id = "moskow" > <body onload ="new waktu().moskow()"> GMT + 3 Moskow, Rusia</p>
+        <p id = "uae" > <body onload ="new waktu().abudhabi()"> GMT + 4 Abu Dhabi, UEA</p>
+        <p id = "pakistan" > <body onload ="new waktu().pakistan()"> GMT + 5 Islamabad, Pakistan</p>
+        <p id = "kazaktan" >  <body onload ="new waktu().astana()"> GMT + 6 Astana, Kazakhtan</p>
+        <p id = "indonesia" > <body onload ="new waktu().jakarta()"> GMT + 7 Jakarta, Indonesia</p>
+       <p id = "china" ><body onload ="new waktu().china()"> GMT + 8 Beijing , China</p>
+       <p id = "tokyo" > <body onload ="new waktu().tokyo()"> GMT + 9 Tokyo, Jepang</p>
+
+       <p id = "tampilan"></p>
+    
+    </body>
+
+        
+        <center>
+    </p>
+        
+      
+
+    </body>
+<script>
+	window.setTimeout("waktu()", 1000);
+ 
+    function waktu() {
+		var waktu = new Date(); 
+        setTimeout("waktu()", 1000);  
+    
+        var jamdefault = waktu.getHours();
+        var menitdefault = waktu.getMinutes();
+        var detikdefault = waktu.getSeconds();
+        
+        this.london = function(){let jamlondon = jamdefault++;
+                                let menitlondon = menitdefault++;
+                                let detiklondon = detikdefault++; 
+        this.tampilan (`${jamlondon} : ${menitlondon} : ${detiklondon}`)};
+
+        this.paris = function(){let jamparis = jamdefault+=2;
+                                let menitparis = menitdefault+=2;
+                                let detikparis = detikdefault+=2;
+        this.tampilan (`${jamparis} : ${menitparis} : ${detikparis}`)};
+
+        this.istanbul = function(){let jamistanbul = jamdefault+=3;
+                                let menitistanbul = menitdefault+=3;
+                                let detikistanbul = detikdefault+=3;
+        this.tampilan (`${jamistanbul} : ${menitistanbul} : ${detikistanbul}`)};
+
+        this.moskow = function(){let jammoskow = jamdefault+=4;
+                                let menitmoskow = menitdefault+=4;
+                                let detikmoskow = detikdefault+=4};
+        this.tampilan (`${jammoskow} : ${menitmoskow} : ${detikmoskow}`)};
+        
+        this.abudhabi= function(){let jamabudhabi = jamdefault+=5;
+                                let menitabudhabi = menitdefault+=5;
+                                let detikabudhabi = detikdefault+=5;
+       this.tampilan (`${jamabudhabi} : ${menitabudhabi} : ${detikabudhabi}`)};
+       
+        this.pakistan= function(){let jampakistan = jamdefault+=6;
+                                let menitpakistan = menitdefault+=6;
+                                let detikpakistan = detikdefault+=6; 
+        this.tampilan (`${jampakistan} : ${menitpakistan} : ${detikpakistan}`)}
+                                              
+        this.jakarta= function(){let jamjakarta = jamdefault+=7;
+                                let menitjakarta = menitdefault+=7;
+                                let detikjakarta = detikdefault+=7;
+       this.tampilan (`${jamjakarta} : ${menitjakarta} : ${detikjakarta}`)}
+
+        this.china= function(){let jamchina = jamdefault+=8;
+                                let menitchina = menitdefault+=8;
+                                let detikchina = detikdefault+=8; 
+                                
+        this.tampilan (`${jamchina} : ${menitchina} : ${detikchina}`)}
+
+        this.tokyo= function(){let jamtokyo = jamdefault+9;
+                                let menittokyo = menitdefault+9;
+                                let detiktokyo = detikdefault+9;
+        this.tampilan (`${jamtokyo} : ${menittokyo} : ${detiktokyo}`)}
+
+
+this.tampilan = function (text) {document.getElementById("tampilan").innerHTML = text}
+
+        
