@@ -1,92 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Jam Dunia </title>
+    <title>Jam Dunia </title>
+    
+    <style>
+        text {
+            font-size: 30px;
+            font-weight: bold;text-align :center
+        }
+
+         h1 {
+            font-size: 50px;text-align :center
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+p{line-height:30px;}
+        
+    </style>
+    
 </head>
 <body >
-    <h1> <center>Jam Dunia</center></h1>
+<h1 > JAM DUNIA</h1>
 
-    <h3> <center>
-      <p id = "london" ><body onload ="new waktu().london()"> GMT+0 London, Inggris</p>
-       <p id = "paris" > <body onload ="new waktu().paris()"> GMT + 1 Paris, Perancis</p>
-        <p id = "istanbul" ></p> <body onload ="new waktu().istanbul()"> GMT + 2 Istanbul, Turki</p>
-        <p id = "moskow" > <body onload ="new waktu().moskow()"> GMT + 3 Moskow, Rusia</p>
-        <p id = "uae" > <body onload ="new waktu().abudhabi()"> GMT + 4 Abu Dhabi, UEA</p>
-        <p id = "pakistan" > <body onload ="new waktu().pakistan()"> GMT + 5 Islamabad, Pakistan</p>
-        <p id = "kazaktan" >  <body onload ="new waktu().astana()"> GMT + 6 Astana, Kazakhtan</p>
-        <p id = "indonesia" > <body onload ="new waktu().jakarta()"> GMT + 7 Jakarta, Indonesia</p>
-       <p id = "china" ><body onload ="new waktu().china()"> GMT + 8 Beijing , China</p>
-       <p id = "tokyo" > <body onload ="new waktu().tokyo()"> GMT + 9 Tokyo, Jepang</p>
+<center>
+     <text id="london" > </text>
+     <p>
+     <text id="paris" > </text> 
+     <p>
+     <text id="gaza" > </text> 
+     <p>
+     <text id="moskow" > </text>
+     <p>
+     <text id="abudhabi" > </text>
+     <p>
+     <text id="pakistan" > </text>
+     <p>
+     <text id="astana" > </text>
+     <p>
+     <text id="jakarta" > </text>
+     <p>
+     <text id="china" > </text>
+     <p>
+     <text id="jepang" > </text>
 
-       <p id = "tampilan"></p>
-    
-    </body>
-
-        
-        <center>
-    </p>
-        
-      
-
-    </body>
+    </center>
+     
 <script>
 	window.setTimeout("waktu()", 1000);
- 
-    function waktu() {
-		var waktu = new Date(); 
+     function waktu() {
+        var waktu = new Date(); 
+        var jam = waktu.getUTCHours() ; var minute = waktu.getUTCMinutes() ; var detik = waktu.getUTCSeconds()
+        var JGMT1 = jam+1 ; var MGMT1 = minute+1 ; var DGMT1 = detik+1
+        var JGMT2 = jam+2 ; var MGMT2 = minute+2 ; var DGMT2 = detik+2
+        var JGMT3 = jam+3 ; var MGMT3 = minute+3 ; var DGMT3 = detik+3
+        var JGMT4 = jam+4 ; var MGMT4 = minute+4 ; var DGMT4 = detik+4
+        var JGMT5 = jam+5 ; var MGMT5 = minute+5 ; var DGMT5 = detik+5
+        var JGMT6 = jam+6 ; var MGMT6 = minute+6 ; var DGMT6 = detik+6
+        var JGMT7 = jam+7 ; var MGMT7 = minute+7 ; var DGMT7 = detik+7
+        var JGMT8 = jam+8 ; var MGMT8 = minute+8 ; var DGMT8 = detik+8
+        var JGMT9 = jam+9 ; var MGMT9 = minute+9 ; var DGMT9 = detik+9
+
+        var london = `${jam} : ${minute} : ${detik} GMT+0 London, Inggris`
+        var paris = `${JGMT1} : ${MGMT1} : ${DGMT1} GMT+1 Paris,Perancis `
+        var gaza = `${JGMT2} : ${MGMT2} : ${DGMT2} GMT+2 Gaza, Palestine`
+        var moskow = `${JGMT3} : ${MGMT3} : ${DGMT3} GMT+3 Moskow, Rusia`
+        var abudhabi = `${JGMT4} : ${MGMT4} : ${DGMT4} GMT+4 Abu Dhabi,UAE`
+        var pakistan = `${JGMT5} : ${MGMT5} : ${DGMT5} GMT+5 Islamabad, Pakistan`
+        var astana = `${JGMT6} : ${MGMT6} : ${DGMT6} GMT+6 Astana, Pakistan`
+        var jakarta = `${JGMT7} : ${MGMT7} : ${DGMT7} GMT+7 Jakarta, Indonesia`
+        var china = `${JGMT8} : ${MGMT8} : ${DGMT8} GMT+8 Beijing, China`
+        var jepang = `${JGMT9} : ${MGMT9} : ${DGMT9} GMT+9 Tokyo, Jepang`
+
         setTimeout("waktu()", 1000);  
+        document.getElementById("london").innerHTML = london ;      
+        document.getElementById("paris").innerHTML = paris ;
+        document.getElementById("gaza").innerHTML = gaza ;
+        document.getElementById("moskow").innerHTML = moskow ;
+        document.getElementById("abudhabi").innerHTML = abudhabi ;
+        document.getElementById("pakistan").innerHTML =  pakistan;
+        document.getElementById("astana").innerHTML =  astana;
+        document.getElementById("jakarta").innerHTML =  jakarta;
+        document.getElementById("china").innerHTML =  china;
+        document.getElementById("jepang").innerHTML =  jepang;
+
+    }
     
-        var jamdefault = waktu.getHours();
-        var menitdefault = waktu.getMinutes();
-        var detikdefault = waktu.getSeconds();
-        
-        this.london = function(){let jamlondon = jamdefault++;
-                                let menitlondon = menitdefault++;
-                                let detiklondon = detikdefault++; 
-        this.tampilan (`${jamlondon} : ${menitlondon} : ${detiklondon}`)};
-
-        this.paris = function(){let jamparis = jamdefault+=2;
-                                let menitparis = menitdefault+=2;
-                                let detikparis = detikdefault+=2;
-        this.tampilan (`${jamparis} : ${menitparis} : ${detikparis}`)};
-
-        this.istanbul = function(){let jamistanbul = jamdefault+=3;
-                                let menitistanbul = menitdefault+=3;
-                                let detikistanbul = detikdefault+=3;
-        this.tampilan (`${jamistanbul} : ${menitistanbul} : ${detikistanbul}`)};
-
-        this.moskow = function(){let jammoskow = jamdefault+=4;
-                                let menitmoskow = menitdefault+=4;
-                                let detikmoskow = detikdefault+=4};
-        this.tampilan (`${jammoskow} : ${menitmoskow} : ${detikmoskow}`)};
-        
-        this.abudhabi= function(){let jamabudhabi = jamdefault+=5;
-                                let menitabudhabi = menitdefault+=5;
-                                let detikabudhabi = detikdefault+=5;
-       this.tampilan (`${jamabudhabi} : ${menitabudhabi} : ${detikabudhabi}`)};
-       
-        this.pakistan= function(){let jampakistan = jamdefault+=6;
-                                let menitpakistan = menitdefault+=6;
-                                let detikpakistan = detikdefault+=6; 
-        this.tampilan (`${jampakistan} : ${menitpakistan} : ${detikpakistan}`)}
-                                              
-        this.jakarta= function(){let jamjakarta = jamdefault+=7;
-                                let menitjakarta = menitdefault+=7;
-                                let detikjakarta = detikdefault+=7;
-       this.tampilan (`${jamjakarta} : ${menitjakarta} : ${detikjakarta}`)}
-
-        this.china= function(){let jamchina = jamdefault+=8;
-                                let menitchina = menitdefault+=8;
-                                let detikchina = detikdefault+=8; 
-                                
-        this.tampilan (`${jamchina} : ${menitchina} : ${detikchina}`)}
-
-        this.tokyo= function(){let jamtokyo = jamdefault+9;
-                                let menittokyo = menitdefault+9;
-                                let detiktokyo = detikdefault+9;
-        this.tampilan (`${jamtokyo} : ${menittokyo} : ${detiktokyo}`)}
-
-
-this.tampilan = function (text) {document.getElementById("tampilan").innerHTML = text}
+    
+</script>
+</body>
 
         
